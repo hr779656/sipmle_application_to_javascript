@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    
+    <div id="container1">
+        <p class="p1">put in first intigers</p>
+            <input id="input1" type="text" placeholder="NUMBER1">
+        <p class="p2">put in second intigers</p>
+            <input id="input2" type="text" placeholder="NUMBER2">
+          <p class="p3">select opreators</p>   
+            <select id="select_box">
+                <option value="0">+</option>
+                <option value="1">-</option>
+                <option value="2">/</option>
+                <option value="3">*</option>
+            </select>
+            <button onclick="foo()">submit</button>
+    </div>
+        
+    <script>
+        function foo() {
+        var number1 = document.getElementById("input1").value;
+        var number2 = document.getElementById("input2").value;
+        var opreator = document.getElementById("select_box").value;
+
+        if(opreator == 0){
+            alert(`YOUR ANSWER IS: ${parseInt(number1) + parseInt(number2)}`)
+        }else if(opreator == 1){
+            alert(`YOUR ANSWER IS: ${parseInt(number1) - parseInt(number2)}`)
+        }else if(opreator == 2){
+            alert(`YOUR ANSWER IS: ${parseInt(number1) / parseInt(number2)}`)
+        }else if(opreator == 3){
+            alert(`YOUR ANSWER IS: ${parseInt(number1) * parseInt(number2)}`)
+        }else{
+            alert("are u crazy")
+        }
+            
+        }
+    </script>
+</body>
+</html>
